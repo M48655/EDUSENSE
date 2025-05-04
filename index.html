@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Assessment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>📸 Hand Detection</h1>
+
+  <!-- فيديو الكاميرا -->
+  <video id="video" autoplay playsinline style="display:none;"></video>
+
+  <!-- تتبع اليد -->
+  <canvas id="canvas" width="640" height="480"></canvas>
+
+  <!-- السؤال -->
+  <div id="question" style="position:absolute; top:60px; left:10px; font-size:22px; background:#f0f0f0; padding:10px; border:1px solid #000;">
+    🧠 What is the function of the digestive system?
+  </div>
+
+  <!-- تسجيل الصوت -->
+  <div class="box" style="margin-top: 20px;">
+    <button onclick="startRecording()">🎙️ Start Recording</button>
+    <button onclick="stopRecording()">🛑 Stop Recording</button>
+    <audio id="student-audio" controls style="display:none;"></audio>
+  </div>
+
+  <!-- MediaPipe Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
